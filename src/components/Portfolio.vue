@@ -1,35 +1,30 @@
 <script setup>
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
 import Carousel from 'primevue/carousel';
 
-import "/src/assets/portfolio/bbq/1.webp";
-import "/src/assets/portfolio/bbq/2.webp";
-import "/src/assets/portfolio/bbq/3.webp";
+import bbqimage1 from "/src/assets/portfolio/bbq/1.webp";
+import bbqimage2 from "/src/assets/portfolio/bbq/2.webp";
+import bbqimage3 from "/src/assets/portfolio/bbq/3.webp";
 
-import "/src/assets/portfolio/eggbank/1.webp";
-import "/src/assets/portfolio/eggbank/2.webp";
-import "/src/assets/portfolio/eggbank/3.webp";
+import eggbankimage1 from "/src/assets/portfolio/eggbank/1.webp";
+import eggbankimage2 from "/src/assets/portfolio/eggbank/2.webp";
+import eggbankimage3 from "/src/assets/portfolio/eggbank/3.webp";
 
-import "/src/assets/portfolio/ballet/1.webp";
-import "/src/assets/portfolio/ballet/2.webp";
-import "/src/assets/portfolio/ballet/3.webp";
-import "/src/assets/portfolio/ballet/4.webp";
+import balletimage1 from "/src/assets/portfolio/ballet/1.webp";
+import balletimage2 from "/src/assets/portfolio/ballet/2.webp";
+import balletimage3 from "/src/assets/portfolio/ballet/3.webp";
+import balletimage4 from "/src/assets/portfolio/ballet/4.webp";
 
-import "/src/assets/portfolio/18wheels/1.webp";
-import "/src/assets/portfolio/18wheels/2.webp";
-import "/src/assets/portfolio/18wheels/3.webp";
-import "/src/assets/portfolio/18wheels/4.webp";
+import drivingschoolimage1 from "/src/assets/portfolio/18wheels/1.webp";
+import drivingschoolimage2 from "/src/assets/portfolio/18wheels/2.webp";
+import drivingschoolimage3 from "/src/assets/portfolio/18wheels/3.webp";
+import drivingschoolimage4 from "/src/assets/portfolio/18wheels/4.webp";
 
-import "/src/assets/portfolio/butyporuch/1.webp";
-import "/src/assets/portfolio/butyporuch/2.webp";
-import "/src/assets/portfolio/butyporuch/3.webp";
-import "/src/assets/portfolio/butyporuch/4.webp";
+import butyporuchimage1 from "/src/assets/portfolio/butyporuch/1.webp";
+import butyporuchimage2 from "/src/assets/portfolio/butyporuch/2.webp";
+import butyporuchimage3 from "/src/assets/portfolio/butyporuch/3.webp";
+import butyporuchimage4 from "/src/assets/portfolio/butyporuch/4.webp";
 
-import "/src/assets/portfolio/hotels/1.webp";
+import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
 </script>
 
 <template>
@@ -64,61 +59,61 @@ import "/src/assets/portfolio/hotels/1.webp";
           [
             {
               title: "Tim's Barbecue",
-              image: "/src/assets/portfolio/bbq/2.webp",
+              image: bbqimage2,
               description: 'Website for Philadelphian barbecue restaurant chain Tim\'s Barbecue',
               tags: ['Entirely made', 'Technical support']
             },
             {
               title: "Tim's Barbecue",
-              image: "/src/assets/portfolio/bbq/1.webp",
+              image: bbqimage1,
               description: 'The website allows you to customise and select different chain restaurants, menus, categories and dishes. Payment is done online using SquareUp API'
             },
             {
               title: "Tim's Barbecue",
-              image: "/src/assets/portfolio/bbq/3.webp",
+              image: bbqimage3,
               description: 'From the administrator\s side there is the possibility of convenient management of customers and orders, receiving notifications, including notification of new orders, stock quantities and others'
             },
           ],
           [
             {
               title: "Adonis Eggbank",
-              image: "/src/assets/portfolio/eggbank/1.webp",
+              image: eggbankimage1,
               description: 'A website for purchasing oocytes from donors of Adonis Eggbank',
               tags: ['Partially made', 'Technical support']
             },
             {
               title: "Adonis Eggbank",
-              image: "/src/assets/portfolio/eggbank/2.webp",
+              image: eggbankimage2,
               description: 'The website is multi-lingual, has a personal account allowing you to view donors, add them to your favourites, buy and compare them'
             },
             {
               title: "Adonis Eggbank",
-              image: "/src/assets/portfolio/eggbank/3.webp",
+              image: eggbankimage3,
               description: 'The site contains lots of customisable information about the donor, including photos, signature, family tree and more'
             }
           ],
           [
             {
               title: "Fort wayne ballet",
-              image: "/src/assets/portfolio/ballet/1.webp",
+              image: balletimage1,
               description: 'Web site for Fort Wayne Ballet\'s ballet school',
               tags: ['Technical support']
             },
             {
               title: "Fort wayne ballet",
-              image: "/src/assets/portfolio/ballet/2.webp",
+              image: balletimage2,
               description: '',
               tags: []
             },
             {
               title: "Fort wayne ballet",
-              image: "/src/assets/portfolio/ballet/3.webp",
+              image: balletimage3,
               description: '',
               tags: []
             },
             {
               title: "Fort wayne ballet",
-              image: "/src/assets/portfolio/ballet/4.webp",
+              image: balletimage4,
               description: '',
               tags: []
             }
@@ -126,25 +121,25 @@ import "/src/assets/portfolio/hotels/1.webp";
           [
             {
               title: "CDL testing portal for 18 Wheeler",
-              image: "/src/assets/portfolio/18wheels/1.webp",
+              image: drivingschoolimage1,
               description: 'An online portal to take driving tests for 18 Wheeler Driving School',
               tags: ['Entirely made']
             },
             {
               title: "CDL testing portal for 18 Wheeler",
-              image: "/src/assets/portfolio/18wheels/2.webp",
+              image: drivingschoolimage2,
               description: '',
               tags: []
             },
             {
               title: "CDL testing portal for 18 Wheeler",
-              image: "/src/assets/portfolio/18wheels/3.webp",
+              image: drivingschoolimage3,
               description: '',
               tags: []
             },
             {
               title: "CDL testing portal for 18 Wheeler",
-              image: "/src/assets/portfolio/18wheels/4.webp",
+              image: drivingschoolimage4,
               description: '',
               tags: []
             },
@@ -152,25 +147,25 @@ import "/src/assets/portfolio/hotels/1.webp";
           [
             {
               title: "Buty Poruch",
-              image: "/src/assets/portfolio/butyporuch/1.webp",
+              image: butyporuchimage1,
               description: 'Ukrainian portal to help cancer patients',
               tags: ['Technical support']
             },
             {
               title: "Buty Poruch",
-              image: "/src/assets/portfolio/butyporuch/2.webp",
+              image: butyporuchimage2,
               description: 'The website contains many useful articles on a variety of topics',
               tags: []
             },
             {
               title: "Buty Poruch",
-              image: "/src/assets/portfolio/butyporuch/3.webp",
+              image: butyporuchimage3,
               description: '',
               tags: []
             },
             {
               title: "Buty Poruch",
-              image: "/src/assets/portfolio/butyporuch/4.webp",
+              image: butyporuchimage4,
               description: '',
               tags: []
             }
@@ -178,7 +173,7 @@ import "/src/assets/portfolio/hotels/1.webp";
           [
             {
               title: "Hotel tenants tracking system",
-              image: "/src/assets/portfolio/hotels/1.webp",
+              image: hotelsimage1,
               description: 'A system for tracking tenants and their guests in a hotel chain',
               tags: ['Entirely made', 'Technical support']
             }
