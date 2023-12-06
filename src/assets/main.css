@@ -5,6 +5,8 @@
   margin: 0 auto;
   padding: 2rem;
 
+  flex-direction: column;
+
   font-weight: normal;
 }
 
@@ -15,21 +17,22 @@ a,
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
 
 @media (min-width: 1024px) {
-  body {
+  main {
     display: flex;
+    flex-direction: column;
     place-items: center;
+    align-items: stretch;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: 0 2rem;
+    position: relative;
+  }
+
+  main {
+    
   }
 }

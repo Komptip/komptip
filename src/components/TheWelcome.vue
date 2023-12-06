@@ -1,5 +1,4 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
@@ -8,81 +7,84 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+  <section>
+    <div class="photo"></div>
+    <div class="content">
+      <p class="text--primary">Hey! I'm Andrii Bondarenko</p>
+      <p class="text--secondary">Web developer with knowlange of 
+        <a class="tag" href="#stack">PHP</a> 
+        <a class="tag" href="#stack">Javascript</a>
+        <a class="tag" href="#stack">HTML</a>
+        <a class="tag" href="#stack">CSS</a>
+        <a class="tag" href="#stack">SASS</a>
+        <a class="tag" href="#stack">SCSS</a>
+        <a class="tag" href="#stack">Vue</a>
+        <a class="tag" href="#stack">jQuery</a>
+        <a class="tag" href="#stack">Laravel</a>
+        <a class="tag" href="#stack">Git</a>
+        <a class="tag" href="#stack">Docker</a>
+      </p>
+    </div>
+  </section>
 </template>
+
+<style scoped>
+    
+  section {
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    gap: 5rem;
+  }
+
+  .photo {
+    display: block;
+
+    width: 30rem;
+    flex: 1;
+    aspect-ratio: 1;
+
+    background-image: url(/src/assets/photo-1.webp);
+    background-size: 180%;
+    background-position: right 15% top 25%;
+
+    border-radius: 50%;
+  }
+
+  .content {
+
+    flex: 2.2;
+    
+    .text--primary {
+      font-size: 3.0rem;
+    }
+
+    .text--secondary {
+      font-size: 1.2rem;
+
+      .tag {
+        background-color: var(--vt-c-soft-transparent);
+        color: var(--vt-c-soft-white);
+        margin: 0.25rem;
+        padding: 0.3rem 1.1rem;
+        font-size: 0.85rem;
+
+        border-radius: 0.5rem;
+        transition: color 0.5s;
+
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover {
+          transition: color 0.5s;
+          color: var(--color-text);
+        }
+      }
+    }
+  }
+
+</style>
+
+
