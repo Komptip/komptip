@@ -5,6 +5,31 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import Carousel from 'primevue/carousel';
+
+import "/src/assets/portfolio/bbq/1.webp";
+import "/src/assets/portfolio/bbq/2.webp";
+import "/src/assets/portfolio/bbq/3.webp";
+
+import "/src/assets/portfolio/eggbank/1.webp";
+import "/src/assets/portfolio/eggbank/2.webp";
+import "/src/assets/portfolio/eggbank/3.webp";
+
+import "/src/assets/portfolio/ballet/1.webp";
+import "/src/assets/portfolio/ballet/2.webp";
+import "/src/assets/portfolio/ballet/3.webp";
+import "/src/assets/portfolio/ballet/4.webp";
+
+import "/src/assets/portfolio/18wheels/1.webp";
+import "/src/assets/portfolio/18wheels/2.webp";
+import "/src/assets/portfolio/18wheels/3.webp";
+import "/src/assets/portfolio/18wheels/4.webp";
+
+import "/src/assets/portfolio/butyporuch/1.webp";
+import "/src/assets/portfolio/butyporuch/2.webp";
+import "/src/assets/portfolio/butyporuch/3.webp";
+import "/src/assets/portfolio/butyporuch/4.webp";
+
+import "/src/assets/portfolio/hotels/1.webp";
 </script>
 
 <template>
@@ -68,7 +93,7 @@ import Carousel from 'primevue/carousel';
             },
             {
               title: "Adonis Eggbank",
-              image: "/src/assets/portfolio/eggbank/2.webp",
+              image: "/src/assets/portfolio/eggbank/3.webp",
               description: 'The site contains lots of customisable information about the donor, including photos, signature, family tree and more'
             }
           ],
