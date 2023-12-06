@@ -1,43 +1,100 @@
 <script setup>
-
+  import 'primeicons/primeicons.css'
 </script>
 
 <template>
-  <header>
+  <i :class="{'toggled': toggled}" class="nav-toggle pi pi-align-justify" @click="toggled = !toggled"></i>
+  <header :class="{'toggled': toggled}"  @click="toggled = !toggled">
     <a href="#stack">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#faq">FAQ</a>
     <a href="#contacts">Contacts</a>
   </header>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        toggled: false
+      }
+    }
+  };
+</script>
+<style lang="scss" scoped>
+  .nav-toggle {
+    position: fixed;
+    font-size: 2rem;
 
-<style scoped>
+    display: none;
+
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    z-index: 10;
+
+    &.toggled {
+      opacity: 0;
+
+      transition: 0.2s;
+    }
+  }
+
+  header {
+      width: 100%;
+      height: 5rem;
+
+      position: absolute;
+      left: 0;
+      top: 0px;
+
+      gap: 1.5rem;
+
+      display: flex;
+      justify-content: center;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.3rem;
+    padding: 1rem;
+
+    color: white;
+
+    cursor: pointer;
+  }
+
+  
+  @media (max-width: 600px) {
+    .nav-toggle {
+      display: block;
+    }
 
     header {
-        width: 100%;
-        height: 5rem;
+      position: fixed;
 
-        position: absolute;
-        left: 0;
-        top: 0px;
+      background-color: var(--vt-c-hard-transparent);
 
-        gap: 1.5rem;
-
-        display: flex;
-        justify-content: center;
-    }
-
-    a {
-      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
 
-      font-size: 1.3rem;
-      padding: 1rem;
+      z-index: 2;
+      opacity: 1;
 
-      color: white;
+      transition: opacity 0.2s;
 
-      cursor: pointer;
+      &:not(.toggled){
+        opacity: 0;
+        
+        pointer-events: none;
+
+        transition: 0.2s;
+      }
     }
+  }
 
 </style>
 

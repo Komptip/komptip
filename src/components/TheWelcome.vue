@@ -20,7 +20,7 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     
   section {
     display: flex;
@@ -73,6 +73,26 @@
           transition: color 0.5s;
           color: var(--color-text);
         }
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    section {
+      flex-direction: column;
+      justify-content: center;
+
+      .photo {
+        width: auto;
+        width: 40vh;
+        max-height: 40vh;
+        max-width: 40vh;
+      }
+
+      .content {
+        flex: 0;
+
+        text-align: center;
       }
     }
   }

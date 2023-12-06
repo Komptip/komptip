@@ -5,6 +5,7 @@
   --vt-c-black: #242a38;
 
   --vt-c-soft-transparent: rgba(0, 0, 0, 0.2);
+  --vt-c-hard-transparent: rgba(0, 0, 0, 0.85);
   --vt-c-soft-white: #dedde6;
 
   scroll-behavior: smooth;

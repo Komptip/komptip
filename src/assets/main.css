@@ -8,6 +8,7 @@
   flex-direction: column;
 
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 a,
@@ -30,9 +31,5 @@ a,
     display: flex;
     padding: 0 2rem;
     position: relative;
-  }
-
-  main {
-    
   }
 }

@@ -203,6 +203,12 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
     fill: var(--color-text);
   }
 
+  @media (max-width: 670px) {
+    :deep(.p-carousel-prev), :deep(.p-carousel-next){
+      display: none;
+    }
+  }
+
   p.primary {
     font-size: 3rem;
     text-align: center;
