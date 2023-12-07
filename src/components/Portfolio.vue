@@ -54,6 +54,7 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
 <script>
   export default {
     data() {
+      Carousel.methods.onTouchMove = () => { };
       return {
         items: [
           [
@@ -231,6 +232,12 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
 
     display: flex;
     flex-direction: column;
+      
+    @media (max-width: 670px) {
+      & {
+        height: 60vh;
+      }
+    }
 
     .transition {
       position: absolute;
@@ -255,10 +262,24 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
 
       .title {
         font-size: 2.5rem;
+
+        
+        @media (max-width: 670px) {
+          & {
+            font-size: 1.5rem;
+          }
+        }
       }
 
       .description {
         font-size: 1.2rem;
+
+        
+        @media (max-width: 670px) {
+          & {
+            font-size: 0.9rem;
+          }
+        }
       }
       
       .tags {
@@ -268,6 +289,13 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
         font-size: 1.3rem;
         display: flex;
         gap: 4rem;
+
+        
+        @media (max-width: 670px) {
+          & {
+            font-size: 1.1rem;
+          }
+        }
       }
 
       .learn-more {

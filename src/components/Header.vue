@@ -26,9 +26,14 @@
     font-size: 2rem;
 
     display: none;
+    right: 0px;
+    top: 0px;
 
     opacity: 1;
     transition: opacity 0.2s;
+
+    background-color: var(--vt-c-soft-transparent);
+    padding: 1.4rem;
 
     z-index: 10;
 
