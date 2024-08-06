@@ -8,10 +8,10 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
   <section id="stack">
     <p class="primary">My skills</p>
     <div class="split">
-      <Chart type="bar" :data="charts.frontend.data" :options="charts.frontend.options" class="h-30rem"  />
-      <Chart type="bar" :data="charts.backend.data" :options="charts.backend.options" class="h-30rem"  />
+      <Chart type="bar" :data="charts.frontend.data" :options="charts.frontend.options" />
+      <Chart type="bar" :data="charts.backend.data" :options="charts.backend.options" />
     </div>
-    <Chart type="bar" :data="charts.tools.data" :options="charts.tools.options" class="h-30rem"  />
+    <Chart type="bar" :data="charts.tools.data" :options="charts.tools.options" />
   </section>
 </template>
 <script>
@@ -21,12 +21,12 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
         charts: {
           frontend: {
             data: {
-              labels: ['HTML', 'CSS', 'Vue 3', 'SCSS', 'Vue 2', 'jQuery', 'webGL', 'THREE.JS', 'SASS'],
+              labels: ['HTML', 'CSS', 'Vue 3', 'SCSS', 'Vue 2', 'React', 'jQuery', 'webGL', 'THREE.JS', 'SASS'],
               datasets: [
                 {
                     label: 'Frontend',
                     backgroundColor: '#fa8e42',
-                    data: [100, 100, 100, 100, 100, 75, 70, 60, 60, 30],
+                    data: [100, 100, 100, 100, 100, 85, 75, 70, 60, 60, 30],
                 },
               ],
             },
@@ -48,12 +48,12 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
           },
           backend: {
             data: {
-              labels: ['Laravel', 'SQL', 'Opencart 2/3', 'Nuxt', 'Wordpress', 'Tilda', 'Symfony', 'Shopify'],
+              labels: ['PHP', 'Laravel', 'Python', 'SQL', 'Opencart 2/3', 'Nuxt', 'Wordpress', 'Tilda', 'Symfony', 'Shopify'],
               datasets: [
                 {
                     label: 'Backend',
                     backgroundColor: '#42A5F5',
-                    data: [100, 80, 70, 65, 60, 60, 30, 30],
+                    data: [100, 100, 90, 80, 70, 65, 60, 60, 30, 30],
                 },
               ],
             },
@@ -75,12 +75,12 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
           },
           tools: {
             data: {
-              labels: ['VSCode', 'NPM', 'Postman', 'Sublime Text 3/4', 'Git', 'Docker', ],
+              labels: ['VSCode', 'NPM', 'Postman', 'Linux', 'Sublime Text 3/4', 'Git', 'Docker'],
               datasets: [
                 {
                     label: 'Tools',
                     backgroundColor: '#a855f7',
-                    data: [100, 100, 100, 80, 70, 60],
+                    data: [100, 100, 100, 85, 80, 70, 60],
                 },
               ],
               options: {

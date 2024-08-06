@@ -5,6 +5,7 @@ import Header from './components/Header.vue'
 import Contacts from './components/Contacts.vue'
 import FAQ from './components/FAQ.vue'
 import Stack from './components/Stack.vue'
+import Expirience from './components/Expirience.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Stack from './components/Stack.vue'
   <main>
     <TheWelcome />
     <Stack />
+    <Expirience />
     <Portfolio />
     <FAQ/>
     <Contacts/>

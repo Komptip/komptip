@@ -1,5 +1,7 @@
 <script setup>
 import Carousel from 'primevue/carousel';
+import Dialog from 'primevue/dialog';
+import Image from 'primevue/image';
 
 import bbqimage1 from "/src/assets/portfolio/bbq/1.webp";
 import bbqimage2 from "/src/assets/portfolio/bbq/2.webp";
@@ -8,6 +10,11 @@ import bbqimage3 from "/src/assets/portfolio/bbq/3.webp";
 import eggbankimage1 from "/src/assets/portfolio/eggbank/1.webp";
 import eggbankimage2 from "/src/assets/portfolio/eggbank/2.webp";
 import eggbankimage3 from "/src/assets/portfolio/eggbank/3.webp";
+import eggbankimage4 from "/src/assets/portfolio/eggbank/4.webp";
+import eggbankimage5 from "/src/assets/portfolio/eggbank/5.webp";
+import eggbankimage6 from "/src/assets/portfolio/eggbank/6.webp";
+import eggbankimage7 from "/src/assets/portfolio/eggbank/7.webp";
+import eggbankimage8 from "/src/assets/portfolio/eggbank/8.webp";
 
 import balletimage1 from "/src/assets/portfolio/ballet/1.webp";
 import balletimage2 from "/src/assets/portfolio/ballet/2.webp";
@@ -25,30 +32,73 @@ import butyporuchimage3 from "/src/assets/portfolio/butyporuch/3.webp";
 import butyporuchimage4 from "/src/assets/portfolio/butyporuch/4.webp";
 
 import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
+
+import pipleuimage1 from "/src/assets/portfolio/pipleu/1.webp";
+import pipleuimage2 from "/src/assets/portfolio/pipleu/2.webp";
+import pipleuimage3 from "/src/assets/portfolio/pipleu/3.webp";
+import pipleuimage4 from "/src/assets/portfolio/pipleu/4.webp";
+import pipleuimage5 from "/src/assets/portfolio/pipleu/5.webp";
+
+import zernyatkoimage1 from "/src/assets/portfolio/zernyatko/1.webp";
+import zernyatkoimage2 from "/src/assets/portfolio/zernyatko/2.webp";
+import zernyatkoimage3 from "/src/assets/portfolio/zernyatko/3.webp";
+import zernyatkoimage4 from "/src/assets/portfolio/zernyatko/4.webp";
+
+import themyasoimage1 from "/src/assets/portfolio/themyaso/1.webp";
+import themyasoimage2 from "/src/assets/portfolio/themyaso/2.webp";
+
+import checkboximage1 from "/src/assets/portfolio/checkbox/1.webp";
+
+import vchasnoimage1 from "/src/assets/portfolio/vchasno/1.webp";
+
+import esputnikimage1 from "/src/assets/portfolio/esputnik/1.webp";
+
+import payeerimage1 from "/src/assets/portfolio/payeer/1.webp";
+
+import stipeimage1 from "/src/assets/portfolio/stripe/1.webp";
+
+import squareupimage1 from "/src/assets/portfolio/squareup/1.webp";
+
+import newlabelimage1 from "/src/assets/portfolio/newlabel/1.webp";
+import newlabelimage2 from "/src/assets/portfolio/newlabel/2.webp";
+
+import coolhouseimage1 from "/src/assets/portfolio/coolhouse/1.webp";
+import coolhouseimage2 from "/src/assets/portfolio/coolhouse/2.webp";
+import coolhouseimage3 from "/src/assets/portfolio/coolhouse/3.webp";
+
+import speechkaimage1 from "/src/assets/portfolio/speechka/1.webp";
+import speechkaimage2 from "/src/assets/portfolio/speechka/2.webp";
+import speechkaimage3 from "/src/assets/portfolio/speechka/3.webp";
+
+import aptimage1 from "/src/assets/portfolio/apt/1.webp";
+import aptimage2 from "/src/assets/portfolio/apt/2.webp";
+import aptimage3 from "/src/assets/portfolio/apt/3.webp";
 </script>
 
 <template>
-  <section id="portfolio">
-    <p class="primary">I made...</p>
-    <template v-for="itemList, index in items">
-      <Carousel :ref="'portfolio-item#' + index" :value="itemList" :numVisible="1" :numScroll="1" :pt="{previousButtonIcon: {'width': '1.5rem', 'height': '1.5rem'}, nextButtonIcon: {'width': '1.5rem', 'height': '1.5rem'}}">
-        <template #item="item">
-          <div class="image" :style="{'background-image': `url(${item.data.image})`}">
-            <div class="transition"></div>
-            <div class="card">
-              <p class="title">{{ item.data.title }}</p>
-              <p class="description">
-                {{ item.data.description }}
-              </p>
-              <ul class="tags">
-                <li v-for="tag in item.data.tags">{{ tag }}</li>
-              </ul>
-              <p class="learn-more" v-if="itemList.length - 1 > item.index" v-on:click="$refs['portfolio-item#' + index][0].navForward({})">Learn more</p>
-            </div>
+  <section id="portfolio" class="flex">
+    <h2 class="text-center text-6xl">I made...</h2>
+    <template v-for="category in categories">
+      <h3 class="text-4xl">{{ category.name }}</h3>  
+      <div class="category flex gap-2 flex-wrap">
+        <template v-for="item in category.items">
+          <div class="item flex w-12rem h-12rem flex-column-reverse bg-contain bg-no-repeat cursor-pointer item p-1" :style="'background-image:url(' + item.preview + ')'" v-on:click="selected = item">
+            <p class="text-center mb-4 text-lg font-bold">{{ item.name }}</p>
           </div>
         </template>
-      </Carousel>
+      </div>
     </template>
+    <Dialog v-model:visible="selected" modal :header="selected?.name" :style="{ width: '85rem' }" :draggable="false">
+      <template v-for="component in selected.components">
+        <template v-if="component.type === 'text'">
+          <p class="text-lg">{{ component.content }}</p>
+        </template>
+        <template v-else-if="component.type === 'image'">
+          <img :src="component.content" alt="image" class="w-full p-2" />
+        </template>
+      </template>
+    </Dialog>
+
   </section>
 </template>
 <script>
@@ -56,129 +106,437 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
     data() {
       Carousel.methods.onTouchMove = () => { };
       return {
-        items: [
-          [
+        selected: null,
+        categories: [
+          {
+            name: "Websites",
+            items: [
             {
-              title: "Tim's Barbecue",
-              image: bbqimage2,
-              description: 'Website for Philadelphian barbecue restaurant chain Tim\'s Barbecue',
-              tags: ['Entirely made', 'Technical support']
-            },
-            {
-              title: "Tim's Barbecue",
-              image: bbqimage1,
-              description: 'The website allows you to customise and select different chain restaurants, menus, categories and dishes. Payment is done online using SquareUp API'
-            },
-            {
-              title: "Tim's Barbecue",
-              image: bbqimage3,
-              description: 'From the administrator\s side there is the possibility of convenient management of customers and orders, receiving notifications, including notification of new orders, stock quantities and others'
-            },
-          ],
-          [
-            {
-              title: "Adonis Eggbank",
-              image: eggbankimage1,
-              description: 'A website for purchasing oocytes from donors of Adonis Eggbank',
-              tags: ['Partially made', 'Technical support']
-            },
-            {
-              title: "Adonis Eggbank",
-              image: eggbankimage2,
-              description: 'The website is multi-lingual, has a personal account allowing you to view donors, add them to your favourites, buy and compare them'
-            },
-            {
-              title: "Adonis Eggbank",
-              image: eggbankimage3,
-              description: 'The site contains lots of customisable information about the donor, including photos, signature, family tree and more'
-            }
-          ],
-          [
-            {
-              title: "Fort wayne ballet",
-              image: balletimage1,
-              description: 'Web site for Fort Wayne Ballet\'s ballet school',
-              tags: ['Technical support']
-            },
-            {
-              title: "Fort wayne ballet",
-              image: balletimage2,
-              description: '',
-              tags: []
-            },
-            {
-              title: "Fort wayne ballet",
-              image: balletimage3,
-              description: '',
-              tags: []
-            },
-            {
-              title: "Fort wayne ballet",
-              image: balletimage4,
-              description: '',
-              tags: []
-            }
-          ],
-          [
-            {
-              title: "CDL testing portal for 18 Wheeler",
-              image: drivingschoolimage1,
-              description: 'An online portal to take driving tests for 18 Wheeler Driving School',
-              tags: ['Entirely made']
-            },
-            {
-              title: "CDL testing portal for 18 Wheeler",
-              image: drivingschoolimage2,
-              description: '',
-              tags: []
-            },
-            {
-              title: "CDL testing portal for 18 Wheeler",
-              image: drivingschoolimage3,
-              description: '',
-              tags: []
-            },
-            {
-              title: "CDL testing portal for 18 Wheeler",
-              image: drivingschoolimage4,
-              description: '',
-              tags: []
-            },
-          ],
-          [
-            {
-              title: "Buty Poruch",
-              image: butyporuchimage1,
-              description: 'Ukrainian portal to help cancer patients',
-              tags: ['Technical support']
-            },
-            {
-              title: "Buty Poruch",
-              image: butyporuchimage2,
-              description: 'The website contains many useful articles on a variety of topics',
-              tags: []
-            },
-            {
-              title: "Buty Poruch",
-              image: butyporuchimage3,
-              description: '',
-              tags: []
-            },
-            {
-              title: "Buty Poruch",
-              image: butyporuchimage4,
-              description: '',
-              tags: []
-            }
-          ],
-          [
-            {
-              title: "Hotel tenants tracking system",
-              image: hotelsimage1,
-              description: 'A system for tracking tenants and their guests in a hotel chain',
-              tags: ['Entirely made', 'Technical support']
-            }
-          ]
+                name: "Egg Bank",
+                preview: eggbankimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website for egg donation agency Egg Bank. The agency is located in Ukraine'
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage1
+                  },
+                  {
+                    type: 'text',
+                    content: 'Gives ability to buy a donor eggs online. Donors can be filtered by many different valuees. Each donor has a detailed profile with all the necessary information, each profile is deeply customizeble'
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage8
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage5
+                  },
+                  {
+                    type: 'text',
+                    content: 'Has a user profile with all the necessary information about the account and the orders'
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage6
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage7
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage3
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage4
+                  },
+                  {
+                    type: 'image',
+                    content: eggbankimage2
+                  }
+                ]
+              },
+              {
+                name: "BBQ",
+                preview: bbqimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website for food ordering Tim\'s Barbecue. Philadelphia barbecue restaurant chain'
+                  },
+                  {
+                    type: 'image',
+                    content: bbqimage1
+                  },
+                  {
+                    type: 'text',
+                    content: 'Has ability to book a table, order food, leave a tip and pay for the order online. For payment SquareUp API is used'
+                  },
+                  {
+                    type: 'image',
+                    content: bbqimage2
+                  },
+                  {
+                    type: 'image',
+                    content: bbqimage3
+                  }
+                ]
+              },
+              {
+                name: "Ballet",
+                preview: balletimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website for ballet school, located in Fort Wayne, Indiana'
+                  },
+                  {
+                    type: 'image',
+                    content: balletimage1
+                  },
+                  {
+                    type: 'image',
+                    content: balletimage2
+                  },
+                  {
+                    type: 'image',
+                    content: balletimage3
+                  },
+                  {
+                    type: 'image',
+                    content: balletimage4
+                  }
+                ]
+              },
+              {
+                name: "18 Wheels",
+                preview: drivingschoolimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website for students of truck driving school 18 Wheels. Gives ability for students of driving school to try a different tests for a driver\'s license online. Tests can be taken in different 3 different languages: English, Ukrainian and Russian'
+                  },
+                  {
+                    type: 'image',
+                    content: drivingschoolimage1
+                  },
+                  {
+                    type: 'image',
+                    content: drivingschoolimage2
+                  },
+                  {
+                    type: 'image',
+                    content: drivingschoolimage3
+                  },
+                  {
+                    type: 'image',
+                    content: drivingschoolimage4
+                  }
+                ]
+              },
+              {
+                name: "Buty Poruch",
+                preview: butyporuchimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website for shoe store Buty Poruch, ukrainian non-profit organization that helps people fight cancer'
+                  },
+                  {
+                    type: 'image',
+                    content: butyporuchimage1
+                  },
+                  {
+                    type: 'text',
+                    content: 'Website contains a bunch of different articles, news and information related to cancer'
+                  },
+                  {
+                    type: 'image',
+                    content: butyporuchimage2
+                  },
+                  {
+                    type: 'image',
+                    content: butyporuchimage3
+                  },
+                  {
+                    type: 'image',
+                    content: butyporuchimage4
+                  }
+                ]
+              },
+              {
+                name: "Hotels",
+                preview: hotelsimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'System of tenants tracking for hotel pool lifeguards. Each tenant can have a multiple guests'
+                  },
+                  {
+                    type: 'image',
+                    content: hotelsimage1
+                  }
+                ]
+              },
+              {
+                name: "Pipl security systems",
+                preview: pipleuimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Pipl.eu. Security systems shop in Czech Republic. Has a complex functionality categories, cart, order history, payment. I was involved in the development of the front-end and back-end parts of the project during my work at OwlWeb'
+                  },
+                  {
+                    type: 'image',
+                    content: pipleuimage1
+                  },
+                  {
+                    type: 'image',
+                    content: pipleuimage2
+                  },
+                  {
+                    type: 'image',
+                    content: pipleuimage3
+                  },
+                  {
+                    type: 'image',
+                    content: pipleuimage4
+                  },
+                  {
+                    type: 'image',
+                    content: pipleuimage5
+                  }
+                ]
+              },
+              {
+                name: "Zernyatko",
+                preview: zernyatkoimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Zernyatko. Online store of seeds and fertilizers. I was involved in the development of the front-end and back-end parts of the project during my work at OwlWeb'
+                  },
+                  {
+                    type: 'image',
+                    content: zernyatkoimage1
+                  },
+                  {
+                    type: 'image',
+                    content: zernyatkoimage2
+                  },
+                  {
+                    type: 'image',
+                    content: zernyatkoimage3
+                  },
+                  {
+                    type: 'image',
+                    content: zernyatkoimage4
+                  }
+                ]
+              },
+              {
+                name: "New Label",
+                preview: newlabelimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'New Label. Advertising agency website. Fully created by me. Powered by Vite, Vue 3 and SCSS. Uses PrimeVue components and PrimeFlex css framework'
+                  },
+                  {
+                    type: 'image',
+                    content: newlabelimage1
+                  },
+                  {
+                    type: 'image',
+                    content: newlabelimage2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: "Integrations",
+            items: [
+              {
+                name: "Delivery cost calculator with Google Maps API",
+                preview: themyasoimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Delivery cost calculator powered by Google Maps API. The calculator is used to calculate the cost of delivery of goods from the store to clients'
+                  },
+                  {
+                    type: 'image',
+                    content: themyasoimage1
+                  },
+                  {
+                    type: 'image',
+                    content: themyasoimage2
+                  }
+                ] 
+              },
+              {
+                name: "Cool House online kitchen configurator",
+                preview: coolhouseimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Online kitchen configurator for Cool House. The configurator is used to configure the kitchen and calculate the cost of the kitchen. Made with vanilla JS and jQuery due to website CMS'
+                  },
+                  {
+                    type: 'image',
+                    content: coolhouseimage1
+                  },
+                  {
+                    type: 'image',
+                    content: coolhouseimage2
+                  },
+                  {
+                    type: 'image',
+                    content: coolhouseimage3
+                  }
+                ]
+              },
+              {
+                name: "Checkbox integration",
+                preview: checkboximage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Fully made by me. Laravel integration of Checkbox - Service for issuance of fiscalized invoice. Uses Checkbox REST API. Made as Laravel Service'
+                  },
+                  {
+                    type: 'image',
+                    content: checkboximage1
+                  }
+                ]
+              },
+              {
+                name: "Vchasno integration",
+                preview: vchasnoimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of Vchasno - Service for signing documents using electronic signature. Uses Vchasno REST API. Made as Laravel Service'
+                  },
+                  {
+                    type: 'image',
+                    content: vchasnoimage1
+                  }
+                ]
+              },
+              {
+                name: 'eSputnik integration',
+                preview: esputnikimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of eSputnik - Service for sms and email sending, clients managment. Uses eSputnik REST API. Made as Laravel Service'
+                  },
+                  {
+                    type: 'image',
+                    content: esputnikimage1
+                  }
+                ]
+              },
+              {
+                name: 'Payeer integration',
+                preview: payeerimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of Payeer - Service for online payment processing. Uses Payeer REST API. Fully integrated into the online store'
+                  },
+                  {
+                    type: 'image',
+                    content: payeerimage1
+                  }
+                ]
+              },
+              {
+                name: 'Stripe integration',
+                preview: stipeimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of Stripe - Service for online payment processing'
+                  },
+                  {
+                    type: 'image',
+                    content: stipeimage1
+                  }
+                ]
+              },
+              {
+                name: 'SquareUp integration',
+                preview: squareupimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of SquareUp - Service for online payment processing'
+                  },
+                  {
+                    type: 'image',
+                    content: squareupimage1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: "Pet projects",
+            items: [
+              {
+                name: "Reddit clone Speechka",
+                preview: speechkaimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website pretty similar to Reddit. Users can create posts, comment, upvote and downvote posts. Each post may have unlimited amount of blocks with different type of content. Created and existed in september-november 2022, currently not available. Source code is available on my GitHub, but code is very dirty due to the lack of experience in the development of such projects'
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage1
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage2
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage3
+                  }
+                ]
+              },
+              {
+                name: "AI powered programming tool",
+                preview: aptimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'My small project developed in spring of 2024 in attempt to automate the process of software development. Uses Gemini 1.5 with context length of 1 million tokens, which theoretically is enough to read and store in memory the entire code for large project. Script calls Gemini Python API and gives it ability to get list of all project files, read and edit each file of a project. Unfortunately, code generated by AI is not good enough, so tool cant be used to develop real projects. Code is available on my GitHub'
+                  },
+                  {
+                    type: 'image',
+                    content: aptimage1
+                  },
+                  {
+                    type: 'image',
+                    content: aptimage2
+                  },
+                  {
+                    type: 'image',
+                    content: aptimage3
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     }
@@ -196,140 +554,13 @@ import hotelsimage1 from "/src/assets/portfolio/hotels/1.webp";
     justify-content: center;
   }
 
-  .p-carousel {
-    max-width: 100%;
-  }
-
-  :deep(.p-carousel-prev svg path), :deep(.p-carousel-next svg path){
-    fill: var(--color-text);
-  }
-
-  @media (max-width: 670px) {
-    :deep(.p-carousel-prev), :deep(.p-carousel-next){
-      display: none;
-    }
-  }
-
-  p.primary {
-    font-size: 3rem;
-    text-align: center;
-  }
-  
-  .image {
-    height: 70vh;
-    cursor: pointer;
-
-    background-position: center;
-    background-size: 107%;
-    background-repeat: no-repeat;
-
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    position: relative;
-
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    display: flex;
-    flex-direction: column;
-      
-    @media (max-width: 670px) {
-      & {
-        height: 60vh;
-      }
-    }
-
-    .transition {
-      position: absolute;
-      width: 100%;
-      height: 80%;
-
-      bottom: 0px;
-
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(36,42,56,0.4290091036414566) 16%, var(--color-background) 90%);
-    }
-
-    .card {
-      margin-top: auto;
-
-      display: flex;
-      flex-direction: column;
-
-      padding: 1.5rem;
-
-
-      z-index: 1;
-
-      .title {
-        font-size: 2.5rem;
-
-        
-        @media (max-width: 670px) {
-          & {
-            font-size: 1.5rem;
-          }
-        }
-      }
-
-      .description {
-        font-size: 1.2rem;
-
-        
-        @media (max-width: 670px) {
-          & {
-            font-size: 0.9rem;
-          }
-        }
-      }
-      
-      .tags {
-        margin-top: 1.4rem;
-        margin-bottom: 1rem;
-
-        font-size: 1.3rem;
-        display: flex;
-        gap: 4rem;
-
-        
-        @media (max-width: 670px) {
-          & {
-            font-size: 1.1rem;
-          }
-        }
-      }
-
-      .learn-more {
-        margin-top: 0.2rem;
-        font-size: 2rem;
-        color: var(--vt-c-soft-white);
-
-        &::after {
-          content: "→";
-          padding-left: 10px;
-          transition: padding-left 0.2s;
-        }
-      }
-    }
-
-    transition: background-size 0.5s;
-
+  .item {
+    background-color: rgba(0, 0, 0, 0.25);
+    
     &:hover {
-      background-size: 112%;
-      
-      transition: background-size 0.5s;
-
-      .learn-more {
-        color: white;
-        user-select: none;
-
-        &::after {
-          padding-left: 14px;
-          transition: padding-left 0.2s;
-        }
-      }
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
-
 </style>
 
 

@@ -2,7 +2,7 @@
   <section>
     <div class="photo"></div>
     <div class="content">
-      <p class="text--primary">Hey! I'm Andrii Bondarenko</p>
+      <p class="text--primary">Hey! I'm Andrew Bondarenko</p>
       <p class="text--secondary">Web developer with knowlange of 
         <a class="tag" href="#stack">PHP</a> 
         <a class="tag" href="#stack">Javascript</a>
@@ -15,7 +15,13 @@
         <a class="tag" href="#stack">Laravel</a>
         <a class="tag" href="#stack">Git</a>
         <a class="tag" href="#stack">Docker</a>
+        <a class="tag" href="#stack">...</a>
       </p>
+      <div class="questions">
+        <span>What is your skills?</span>
+        <span>Can i see examples of your code?</span>
+        <span>What is your expirience?</span>
+      </div>
     </div>
   </section>
 </template>
@@ -39,7 +45,7 @@
     aspect-ratio: 1;
 
     background-image: url(/src/assets/photo-1.webp);
-    background-size: 180%;
+    background-size: 100%;
     background-position: right 15% top 25%;
 
     border-radius: 50%;
@@ -72,6 +78,42 @@
         &:hover {
           transition: color 0.5s;
           color: var(--color-text);
+        }
+      }
+    }
+
+    .questions {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        cursor: pointer;
+        font-size: 1.32rem;
+        
+        position: relative;
+
+        &::after {
+          content: "";
+          background-color: white;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          transition: 0.3s;
+        }
+
+        &:hover,
+        &:focus {
+          color: white;
+        }
+
+        &:hover::after,
+        &:focus::after,
+        &.active::after {
+          background-color: white;
+          width: 100%;
         }
       }
     }
