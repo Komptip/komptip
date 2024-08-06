@@ -18,9 +18,9 @@
         <a class="tag" href="#stack">...</a>
       </p>
       <div class="questions">
-        <span>What is your skills?</span>
-        <span>Can i see examples of your code?</span>
-        <span>What is your expirience?</span>
+        <a href="#stack">What is your skills?</a>
+        <a href="#faq">Can i see examples of your code?</a>
+        <a href="#expirience">What is your expirience?</a>
       </div>
     </div>
   </section>
@@ -87,9 +87,10 @@
       display: flex;
       justify-content: space-between;
 
-      span {
+      a {
         cursor: pointer;
         font-size: 1.32rem;
+        color: white;
         
         position: relative;
 

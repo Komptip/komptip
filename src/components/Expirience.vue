@@ -9,7 +9,7 @@ import '/node_modules/primeflex/primeflex.css'
 </script>
 
 <template>
-  <section id="stack">
+  <section id="expirience">
     <p class="primary">My expirience</p>
     <Timeline :value="events" align="alternate" class="customized-timeline">
         <template #marker="slotProps">
