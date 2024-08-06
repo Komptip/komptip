@@ -561,6 +561,25 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
+
+  @media screen and (max-width: 1300px){
+    .item {
+      width: 100% !important;
+      
+      background-position: center;
+      background-size: cover !important;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      p {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+    }
+  }
 </style>
 
 

@@ -6,11 +6,11 @@ import Button from 'primevue/button';
 import 'primevue/resources/themes/lara-dark-indigo/theme.css'
 import '/node_modules/primeflex/primeflex.css'
 
-import freelancephoto from '/freelancehunt-photo.webp';
-import zentixlogo from '/zentix-logo.webp';
-import webwizardslogo from '/webwizards-logo.webp';
-import owlweblogo from '/owlweb-logo.webp';
-import newlabellogo from '/newlabel-logo.webp';
+import freelancephoto from '/src/assets/freelancehunt-photo.webp';
+import zentixlogo from '/src/assets/zentix-logo.webp';
+import webwizardslogo from '/src/assets/webwizards-logo.webp';
+import owlweblogo from '/src/assets/owlweb-logo.webp';
+import newlabellogo from '/src/assets/newlabel-logo.webp';
 
 </script>
 
@@ -123,6 +123,18 @@ import newlabellogo from '/newlabel-logo.webp';
   };
 
 </script>
+
+<style>
+  @media screen and (max-width: 1300px){
+    .p-timeline-event-opposite {
+      display: none;
+    }
+
+    .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(even) {
+      flex-direction: row;
+    }
+  }
+</style>
 
 <style lang="scss" scoped>
 
