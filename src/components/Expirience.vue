@@ -6,6 +6,12 @@ import Button from 'primevue/button';
 import 'primevue/resources/themes/lara-dark-indigo/theme.css'
 import '/node_modules/primeflex/primeflex.css'
 
+import freelancephoto from '/freelancehunt-photo.webp';
+import zentixlogo from '/zentix-logo.webp';
+import webwizardslogo from '/webwizards-logo.webp';
+import owlweblogo from '/owlweb-logo.webp';
+import newlabellogo from '/newlabel-logo.webp';
+
 </script>
 
 <template>
@@ -51,7 +57,7 @@ import '/node_modules/primeflex/primeflex.css'
             icon: 'pi pi-map', 
             color: 'orange',
             images: [
-              { src: '/freelancehunt-photo.webp', alt: 'Freelancehunt' }
+              { src: freelancephoto, alt: 'Freelancehunt' }
             ],
             text: 'I worked as a freelancer for over 3 years, completing more than 40 successful projects, including large-scale online stores, document management systems, and multiple integrations with third-party services (payment gateways, 1C, government services)',
             buttons: [
@@ -64,7 +70,7 @@ import '/node_modules/primeflex/primeflex.css'
             icon: 'pi pi-briefcase',
             color: '#3f51b5',
             images: [
-              { src: '/zentix-logo.webp', alt: 'Zenetix' }
+              { src: zentixlogo, alt: 'Zenetix' }
             ],
             text: 'My first full-time experience working in a team on complex projects. My main tech stack was Laravel + Vue. I was involved in both developing new projects and maintaining existing ones.',
             buttons: [
@@ -77,7 +83,7 @@ import '/node_modules/primeflex/primeflex.css'
             icon: 'pi pi-users',
             color: '#673AB7',
             images: [
-              { src: '/webwizards-logo.webp', alt: 'WebWizards' }
+              { src: webwizardslogo, alt: 'WebWizards' }
             ],
             text: 'My first attempt at organizing my own web studio. Our team size reached 6 people at its peak. 4 programmers (including myself as the team leader) and 2 people responsible for finding clients, one for advertising, and another one for SMM.',
             buttons: [
@@ -91,7 +97,7 @@ import '/node_modules/primeflex/primeflex.css'
             icon: 'pi pi-wrench',
             color: '#e677b9',
             images: [
-              { src: '/owlweb-logo.webp', alt: 'OwlWeb' }
+              { src: owlweblogo, alt: 'OwlWeb' }
             ],
             text: 'Full-time work in web development. My main responsibility was back-end development, but I also worked on small front-end enhancements using React, Vue, and jQuery at different times. I worked on both internal and external projects, including online stores like d2interier.com, pipl.eu, zernyatko.in.ua, and others. I was involved in complex integrations with third-party services, such as the electronic signature service Vchasno and the electronic document management system Chekbox.',
             buttons: [
@@ -104,7 +110,7 @@ import '/node_modules/primeflex/primeflex.css'
             icon: 'pi pi-globe',
             color: '#000',
             images: [
-              { src: '/newlabel-logo.webp', alt: 'NewLabel' }
+              { src: newlabellogo, alt: 'NewLabel' }
             ],
             text: 'Co-founder of an advertising agency in Lublin called NewLabel, which also specializes in website development. I play a managerial role, overseeing the entire development process.',
             buttons: [
