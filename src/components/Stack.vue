@@ -75,12 +75,12 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
           },
           tools: {
             data: {
-              labels: ['VSCode', 'NPM', 'Postman', 'Linux', 'Sublime Text 3/4', 'Git', 'Docker'],
+              labels: ['VSCode', 'NPM', 'Postman', 'Github Copilot', 'Linux', 'Sublime Text 3/4', 'Git', 'Docker'],
               datasets: [
                 {
                     label: 'Tools',
                     backgroundColor: '#a855f7',
-                    data: [100, 100, 100, 85, 80, 70, 60],
+                    data: [100, 100, 100, 100, 85, 80, 70, 60],
                 },
               ],
               options: {
