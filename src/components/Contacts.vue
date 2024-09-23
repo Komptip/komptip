@@ -24,8 +24,8 @@ import Carousel from 'primevue/carousel';
               </div>
             </a>
             <div class="tile" style="flex: 1;">
-              <a class="tile white filled" href="https://t.me/Andrii_Komptip" target="_blank">
-                <img src="/src/assets/telegram.svg" width="50">Telegram
+              <a class="tile white filled" href="https://www.linkedin.com/in/komptip/" target="_blank">
+                <img src="/src/assets/linkedin.svg" width="50">LinkedIn
               </a>
             </div>
           </div>

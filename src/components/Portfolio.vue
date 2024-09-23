@@ -1,7 +1,6 @@
 <script setup>
 import Carousel from 'primevue/carousel';
 import Dialog from 'primevue/dialog';
-import Image from 'primevue/image';
 
 import bbqimage1 from "/src/assets/portfolio/bbq/1.webp";
 import bbqimage2 from "/src/assets/portfolio/bbq/2.webp";
@@ -492,28 +491,6 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
             name: "Pet projects",
             items: [
               {
-                name: "Reddit clone Speechka",
-                preview: speechkaimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'Website pretty similar to Reddit. Users can create posts, comment, upvote and downvote posts. Each post may have unlimited amount of blocks with different type of content. Created and existed in september-november 2022, currently not available. Source code is available on my GitHub, but code is very dirty due to the lack of experience in the development of such projects'
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage1
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage2
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage3
-                  }
-                ]
-              },
-              {
                 name: "AI powered programming tool",
                 preview: aptimage1,
                 components: [
@@ -532,6 +509,28 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
                   {
                     type: 'image',
                     content: aptimage3
+                  }
+                ]
+              },
+              {
+                name: "Reddit clone Speechka",
+                preview: speechkaimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Website pretty similar to Reddit. Users can create posts, comment, upvote and downvote posts. Each post may have unlimited amount of blocks with different type of content. Created and existed in september-november 2022, currently not available. Source code is available on my GitHub, but code is very dirty due to the lack of experience in the development of such projects'
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage1
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage2
+                  },
+                  {
+                    type: 'image',
+                    content: speechkaimage3
                   }
                 ]
               }
