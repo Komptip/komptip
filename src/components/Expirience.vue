@@ -7,7 +7,7 @@ import '/node_modules/primeflex/primeflex.css'
 
 import freelancephoto from '/src/assets/freelancehunt-photo.webp';
 import zentixlogo from '/src/assets/zentix-logo.webp';
-import webwizardslogo from '/src/assets/webwizards-logo.webp';
+import newlabellogo from '/src/assets/newlabel-logo.webp';
 import owlweblogo from '/src/assets/owlweb-logo.webp';
 
 </script>
@@ -48,67 +48,65 @@ import owlweblogo from '/src/assets/owlweb-logo.webp';
   </section>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      events: [
-        {
-          status: 'Freelance', date: 'September 2019 - October 2022',
-          icon: 'pi pi-map',
-          color: 'orange',
-          images: [
-            { src: freelancephoto, alt: 'Freelancehunt' }
-          ],
-          text: 'I worked as a freelancer for over 3 years, completing more than 40 successful projects, including large-scale online stores, document management systems, and multiple integrations with third-party services (payment gateways, 1C, government services)',
-          buttons: [
-            { text: 'Profile on freelancehunt', link: 'https://freelancehunt.com/freelancer/komptip.html#reviews', classes: 'text-sm text-white bg-orange-500 border-yellow-800' }
-          ]
-        },
-        {
-          status: 'Zenetix Digital Production',
-          date: 'January 2022 - May 2023',
-          icon: 'pi pi-briefcase',
-          color: '#3f51b5',
-          images: [
-            { src: zentixlogo, alt: 'Zenetix' }
-          ],
-          text: 'My first full-time experience working in a team on complex projects. My main tech stack was Laravel + Vue. I was involved in both developing new projects and maintaining existing ones.',
-          buttons: [
-            { text: 'Zenetix website', link: 'https://zenetix.com.ua/', classes: 'text-sm text-white bg-indigo-500 border-indigo-800' }
-          ]
-        },
-        {
-          status: 'Head of Own Web Development Team',
-          date: 'Jun - September 2023',
-          icon: 'pi pi-users',
-          color: '#673AB7',
-          images: [
-            { src: webwizardslogo, alt: 'WebWizards' }
-          ],
-          text: 'My attempt at organizing my own web studio. Our team size reached 6 people at its peak. 4 programmers (including myself as the team leader) and 2 people responsible for finding clients, one for advertising, and another one for SMM.',
-          buttons: [
-            { text: 'Website (Not available)', link: 'https://webwizards.studio/', classes: 'text-sm text-white bg-gray-500 border-gray-800' },
-            { text: 'Telegram channel', link: 'https://t.me/webwi_zards', classes: 'text-sm text-white bg-blue-500 border-blue-800' }
-          ]
-        },
-        {
-          status: 'Back-end Web Developer at Owlweb',
-          date: 'January - September 2024',
-          icon: 'pi pi-wrench',
-          color: '#e677b9',
-          images: [
-            { src: owlweblogo, alt: 'OwlWeb' }
-          ],
-          text: 'Full-time work in web development. My main responsibility was back-end development, but I also worked on small front-end enhancements using React, Vue, and jQuery at different times. I worked on both internal and external projects, including online stores like d2interier.com, pipl.eu, zernyatko.in.ua, and others. I was involved in complex integrations with third-party services, such as the electronic signature service Vchasno and the electronic document management system Chekbox.',
-          buttons: [
-            { text: 'OwlWeb website', link: 'https://owlweb.com.ua/en', classes: 'text-sm text-white bg-pink-500 border-pink-800' }
-          ]
-        }
-      ]
+  export default {
+    data() {
+      return {
+        events: [
+          {
+            status: 'Freelance', date: 'September 2019 - January 2022',
+            icon: 'pi pi-map',
+            color: 'orange',
+            images: [
+              { src: freelancephoto, alt: 'Freelancehunt' }
+            ],
+            text: 'I worked as a freelancer for over 3 years, completing more than 40 successful projects, including large-scale online stores, document management systems, and multiple integrations with third-party services (payment gateways, 1C, government services)',
+            buttons: [
+              { text: 'Profile on freelancehunt', link: 'https://freelancehunt.com/freelancer/komptip.html#reviews', classes: 'text-sm text-white bg-orange-500 border-yellow-800' }
+            ]
+          },
+          {
+            status: 'Zenetix Digital Production',
+            date: 'January 2022 - July 2023',
+            icon: 'pi pi-briefcase',
+            color: '#3f51b5',
+            images: [
+              { src: zentixlogo, alt: 'Zenetix' }
+            ],
+            text: 'My first full-time experience working in a team on complex projects. My main tech stack was Laravel + Vue. I was involved in both developing new projects and maintaining existing ones.',
+            buttons: [
+              { text: 'Zenetix website', link: 'https://zenetix.com.ua/', classes: 'text-sm text-white bg-indigo-500 border-indigo-800' }
+            ]
+          },
+          {
+            status: 'NewLabel',
+            date: 'August 2023 - January 2024',
+            icon: 'pi pi-users',
+            color: '#673AB7',
+            images: [
+              { src: newlabellogo, alt: 'NewLabel' }
+            ],
+            text: 'I was responsible for the technical support of the company and served as the project manager for all website development and web design projects. At various times, I led a team of up to four people.',
+            buttons: [
+              { text: 'Website', link: 'https://newlabel.pl/', classes: 'text-sm text-white' }
+            ]
+          },
+          {
+            status: 'Back-end Web Developer at Owlweb',
+            date: 'February - November 2024',
+            icon: 'pi pi-wrench',
+            color: '#e677b9',
+            images: [
+              { src: owlweblogo, alt: 'OwlWeb' }
+            ],
+            text: 'Full-time work in web development. My main responsibility was back-end development, but I also worked on small front-end enhancements using React, Vue, and jQuery at different times. I worked on both internal and external projects, including online stores like d2interier.com, pipl.eu, zernyatko.in.ua, and others. I was involved in complex integrations with third-party services, such as the electronic signature service Vchasno and the electronic document management system Chekbox.',
+            buttons: [
+              { text: 'OwlWeb website', link: 'https://owlweb.com.ua/en', classes: 'text-sm text-white bg-pink-500 border-pink-800' }
+            ]
+          }
+        ]
+      }
     }
-  }
-};
-
+  };
 </script>
 
 <style>

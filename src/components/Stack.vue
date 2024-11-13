@@ -26,7 +26,7 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
                 {
                     label: 'Frontend',
                     backgroundColor: '#fa8e42',
-                    data: [100, 100, 100, 100, 100, 85, 75, 70, 60, 60, 30],
+                    data: [100, 100, 100, 100, 100, 90, 85, 70, 60, 60, 30],
                 },
               ],
             },
@@ -53,7 +53,7 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
                 {
                     label: 'Backend',
                     backgroundColor: '#42A5F5',
-                    data: [100, 100, 90, 80, 70, 65, 60, 60, 30, 30],
+                    data: [100, 100, 90, 90, 85, 65, 60, 60, 30, 30],
                 },
               ],
             },
@@ -75,12 +75,12 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
           },
           tools: {
             data: {
-              labels: ['VSCode', 'NPM', 'Postman', 'Github Copilot', 'Linux', 'Sublime Text 3/4', 'Git', 'Docker'],
+              labels: ['VSCode', 'NPM', 'Postman', 'Github Copilot', 'Github Actions', 'Git', 'Linux', 'Sublime Text 3/4', 'Docker'],
               datasets: [
                 {
                     label: 'Tools',
                     backgroundColor: '#a855f7',
-                    data: [100, 100, 100, 100, 85, 80, 70, 60],
+                    data: [100, 100, 100, 100, 90, 90, 90, 80, 75],
                 },
               ],
               options: {

@@ -72,6 +72,9 @@ import speechkaimage3 from "/src/assets/portfolio/speechka/3.webp";
 import aptimage1 from "/src/assets/portfolio/apt/1.webp";
 import aptimage2 from "/src/assets/portfolio/apt/2.webp";
 import aptimage3 from "/src/assets/portfolio/apt/3.webp";
+
+import reposyimage1 from "/src/assets/portfolio/reposy/1.webp";
+import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
 </script>
 
 <template>
@@ -491,6 +494,24 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
             name: "Pet projects",
             items: [
               {
+                name: "Reposy - AI Google Chrome extension",
+                preview: reposyimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Reposy is my own google chrome extension for developers, its gives you ability to load any entire Github, Gitlab or Bitbucket repository to Google Gemini 1.5 LLM model and ask any questions about its content. Extension build with Vue 3 and Primevue components. Currently is not available publicly because im still in process of google chrome store verification'
+                  },
+                  {
+                    type: 'image',
+                    content: reposyimage1
+                  },
+                  {
+                    type: 'image',
+                    content: reposyimage2
+                  }
+                ]
+              },
+              {
                 name: "AI powered programming tool",
                 preview: aptimage1,
                 components: [
@@ -555,6 +576,10 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
 
   .item {
     background-color: rgba(0, 0, 0, 0.25);
+
+    p {
+      text-shadow: -1px -3px 20px rgb(0, 0, 0);
+    }
     
     &:hover {
       background-color: rgba(0, 0, 0, 0.5);
