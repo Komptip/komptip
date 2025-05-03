@@ -5,11 +5,8 @@
 <template>
   <i :class="{'toggled': toggled}" class="nav-toggle pi pi-align-justify" @click="toggled = !toggled"></i>
   <header :class="{'toggled': toggled}"  @click="toggled = !toggled">
-    <a href="#stack">Skills</a>
-    <a href="#expirience">Expirience</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contacts">Contacts</a>
+    <a href="#faq">FAQ ⁉️</a>
+    <a href="#contacts">Contact me 📞</a>
   </header>
 </template>
 <script>
@@ -56,7 +53,7 @@
       gap: 1.5rem;
 
       display: flex;
-      justify-content: center;
+      justify-content: end;
   }
 
   a {

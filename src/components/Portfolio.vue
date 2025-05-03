@@ -56,6 +56,8 @@ import payeerimage1 from "/src/assets/portfolio/payeer/1.webp";
 
 import stipeimage1 from "/src/assets/portfolio/stripe/1.webp";
 
+import hundredmsimage1 from "/src/assets/portfolio/100ms/1.webp";
+
 import squareupimage1 from "/src/assets/portfolio/squareup/1.webp";
 
 import newlabelimage1 from "/src/assets/portfolio/newlabel/1.webp";
@@ -79,7 +81,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
 
 <template>
   <section id="portfolio" class="flex">
-    <h2 class="text-center text-6xl">I made...</h2>
+    <h2 class="text-center text-6xl">Examples of my work</h2>
     <template v-for="category in categories">
       <h3 class="text-4xl">{{ category.name }}</h3>  
       <div class="category flex gap-2 flex-wrap">
@@ -119,7 +121,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Website for egg donation agency Egg Bank. The agency is located in Ukraine'
+                    content: 'Professional website for a medical agency specializing in ovum donation, based in Ukraine.'
                   },
                   {
                     type: 'image',
@@ -127,7 +129,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                   },
                   {
                     type: 'text',
-                    content: 'Gives ability to buy a donor eggs online. Donors can be filtered by many different valuees. Each donor has a detailed profile with all the necessary information, each profile is deeply customizeble'
+                    content: 'Facilitates online ovum procurement with advanced donor filtering. Comprehensive donor profiles available.'
                   },
                   {
                     type: 'image',
@@ -139,7 +141,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                   },
                   {
                     type: 'text',
-                    content: 'Has a user profile with all the necessary information about the account and the orders'
+                    content: 'Features user accounts with detailed order and profile management.'
                   },
                   {
                     type: 'image',
@@ -164,12 +166,12 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 ]
               },
               {
-                name: "BBQ",
+                name: "Tim's Barbecue",
                 preview: bbqimage1,
                 components: [
                   {
                     type: 'text',
-                    content: 'Website for food ordering Tim\'s Barbecue. Philadelphia barbecue restaurant chain'
+                    content: 'Online ordering platform for Tim\'s Barbecue, a Philadelphia-based restaurant chain.'
                   },
                   {
                     type: 'image',
@@ -177,7 +179,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                   },
                   {
                     type: 'text',
-                    content: 'Has ability to book a table, order food, leave a tip and pay for the order online. For payment SquareUp API is used'
+                    content: 'Features include table reservations, food ordering, tipping, and online payment via SquareUp API integration.'
                   },
                   {
                     type: 'image',
@@ -190,7 +192,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 ]
               },
               {
-                name: "Ballet",
+                name: "Fort Wayne Ballet School",
                 preview: balletimage1,
                 components: [
                   {
@@ -216,12 +218,12 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 ]
               },
               {
-                name: "18 Wheels",
+                name: "18 Wheeler Driving School",
                 preview: drivingschoolimage1,
                 components: [
                   {
                     type: 'text',
-                    content: 'Website for students of truck driving school 18 Wheels. Gives ability for students of driving school to try a different tests for a driver\'s license online. Tests can be taken in different 3 different languages: English, Ukrainian and Russian'
+                    content: 'Online platform for 18 Wheels truck driving school. Offers driver\'s license practice tests in English, Ukrainian, and Russian.'
                   },
                   {
                     type: 'image',
@@ -247,7 +249,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Website for shoe store Buty Poruch, ukrainian non-profit organization that helps people fight cancer'
+                    content: 'Website for Buty Poruch, a Ukrainian non-profit organization dedicated to cancer awareness and support.'
                   },
                   {
                     type: 'image',
@@ -255,7 +257,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                   },
                   {
                     type: 'text',
-                    content: 'Website contains a bunch of different articles, news and information related to cancer'
+                    content: 'Comprehensive resource featuring articles, news, and cancer-related information.'
                   },
                   {
                     type: 'image',
@@ -277,7 +279,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'System of tenants tracking for hotel pool lifeguards. Each tenant can have a multiple guests'
+                    content: 'Tenant tracking system for hotel pool lifeguards, accommodating multiple guests per tenant.'
                   },
                   {
                     type: 'image',
@@ -291,7 +293,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Pipl.eu. Security systems shop in Czech Republic. Has a complex functionality categories, cart, order history, payment. I was involved in the development of the front-end and back-end parts of the project during my work at OwlWeb'
+                    content: 'Pipl.eu: E-commerce platform for security systems in Czech Republic. Features comprehensive functionality including categorization, shopping cart, order history, and payment processing. Contributed to both front-end and back-end development during tenure at OwlWeb.'
                   },
                   {
                     type: 'image',
@@ -321,7 +323,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Zernyatko. Online store of seeds and fertilizers. I was involved in the development of the front-end and back-end parts of the project during my work at OwlWeb'
+                    content: 'Zernyatko: E-commerce platform for seeds and fertilizers. Contributed to front-end and back-end development at OwlWeb.'
                   },
                   {
                     type: 'image',
@@ -347,7 +349,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'New Label. Advertising agency website. Fully created by me. Powered by Vite, Vue 3 and SCSS. Uses PrimeVue components and PrimeFlex css framework'
+                    content: 'New Label: Advertising agency website developed using Vite, Vue 3, SCSS, PrimeVue components, and PrimeFlex CSS framework.'
                   },
                   {
                     type: 'image',
@@ -370,7 +372,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Delivery cost calculator powered by Google Maps API. The calculator is used to calculate the cost of delivery of goods from the store to clients'
+                    content: 'Google Maps API-powered delivery cost calculator for store-to-client goods delivery.'
                   },
                   {
                     type: 'image',
@@ -388,7 +390,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Online kitchen configurator for Cool House. The configurator is used to configure the kitchen and calculate the cost of the kitchen. Made with vanilla JS and jQuery due to website CMS'
+                    content: 'Online kitchen configurator for Cool House, enabling kitchen design and cost calculation. Developed with vanilla JS and jQuery for CMS compatibility.'
                   },
                   {
                     type: 'image',
@@ -410,7 +412,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Fully made by me. Laravel integration of Checkbox - Service for issuance of fiscalized invoice. Uses Checkbox REST API. Made as Laravel Service'
+                    content: 'Laravel integration of Checkbox for fiscalized invoice issuance, utilizing Checkbox REST API.'
                   },
                   {
                     type: 'image',
@@ -424,7 +426,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Integration of Vchasno - Service for signing documents using electronic signature. Uses Vchasno REST API. Made as Laravel Service'
+                    content: 'Integration of Vchasno for electronic document signing, implemented as a Laravel Service using Vchasno REST API.'
                   },
                   {
                     type: 'image',
@@ -438,11 +440,25 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Integration of eSputnik - Service for sms and email sending, clients managment. Uses eSputnik REST API. Made as Laravel Service'
+                    content: 'eSputnik integration for SMS/email sending and client management, developed as a Laravel Service using eSputnik REST API.'
                   },
                   {
                     type: 'image',
                     content: esputnikimage1
+                  }
+                ]
+              },
+              {
+                name: '100ms integration',
+                preview: hundredmsimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration of 100ms for video conferencing, developed as a Laravel Service using 100ms REST API.'
+                  },
+                  {
+                    type: 'image',
+                    content: hundredmsimage1
                   }
                 ]
               },
@@ -452,7 +468,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Integration of Payeer - Service for online payment processing. Uses Payeer REST API. Fully integrated into the online store'
+                    content: 'Full integration of Payeer online payment processing service into an e-commerce platform using Payeer REST API.'
                   },
                   {
                     type: 'image',
@@ -466,7 +482,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Integration of Stripe - Service for online payment processing'
+                    content: 'Integration of Stripe online payment processing service.'
                   },
                   {
                     type: 'image',
@@ -480,7 +496,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Integration of SquareUp - Service for online payment processing'
+                    content: 'Integration of SquareUp online payment processing service.'
                   },
                   {
                     type: 'image',
@@ -499,7 +515,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Reposy is my own google chrome extension for developers, its gives you ability to load any entire Github, Gitlab or Bitbucket repository to Google Gemini 1.5 LLM model and ask any questions about its content. Extension build with Vue 3 and Primevue components. Currently is not available publicly because im still in process of google chrome store verification'
+                    content: 'Reposy is a Google Chrome extension for developers that integrates with Google Gemini 1.5 LLM. It allows loading of entire repositories from Github, Gitlab, or Bitbucket for content analysis. Built with Vue 3 and Primevue components, it\'s available on the Chrome Web Store.'
                   },
                   {
                     type: 'image',
@@ -517,7 +533,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'My small project developed in spring of 2024 in attempt to automate the process of software development. Uses Gemini 1.5 with context length of 1 million tokens, which theoretically is enough to read and store in memory the entire code for large project. Script calls Gemini Python API and gives it ability to get list of all project files, read and edit each file of a project. Unfortunately, code generated by AI is not good enough, so tool cant be used to develop real projects. Code is available on my GitHub'
+                    content: 'An experimental project from spring 2024 aimed at automating software development. Utilizes Gemini 1.5 with a 1 million token context length for comprehensive code analysis. While the AI-generated code quality is currently insufficient for production use, the project demonstrates potential in AI-assisted development.'
                   },
                   {
                     type: 'image',
@@ -539,7 +555,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
                 components: [
                   {
                     type: 'text',
-                    content: 'Website pretty similar to Reddit. Users can create posts, comment, upvote and downvote posts. Each post may have unlimited amount of blocks with different type of content. Created and existed in september-november 2022, currently not available. Source code is available on my GitHub, but code is very dirty due to the lack of experience in the development of such projects'
+                    content: 'A Reddit-inspired platform developed in late 2022. Features include post creation, commenting, and voting. While no longer active, the source code is available on GitHub, serving as a learning exercise in complex web application development.'
                   },
                   {
                     type: 'image',

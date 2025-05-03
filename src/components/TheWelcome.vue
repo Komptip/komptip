@@ -2,25 +2,13 @@
   <section>
     <div class="photo"></div>
     <div class="content">
-      <p class="text--primary">Hey! I'm Andrew Bondarenko</p>
-      <p class="text--secondary">Web developer with knowlange of 
-        <a class="tag" href="#stack">PHP</a> 
-        <a class="tag" href="#stack">Javascript</a>
-        <a class="tag" href="#stack">HTML</a>
-        <a class="tag" href="#stack">CSS</a>
-        <a class="tag" href="#stack">SASS</a>
-        <a class="tag" href="#stack">SCSS</a>
-        <a class="tag" href="#stack">Vue</a>
-        <a class="tag" href="#stack">jQuery</a>
-        <a class="tag" href="#stack">Laravel</a>
-        <a class="tag" href="#stack">Git</a>
-        <a class="tag" href="#stack">Docker</a>
-        <a class="tag" href="#stack">...</a>
+      <p class="text--primary">Hey! I'm <b>Andrew Bondarenko</b></p>
+      <p class="text--secondary">Web developer with 5+ years of experience
       </p>
       <div class="questions">
-        <a href="#stack">What is your skills?</a>
-        <a href="#faq">Can i see examples of your code?</a>
-        <a href="#expirience">What is your expirience?</a>
+        <a href="#stack">My stack</a>
+        <a href="#expirience">My expirience</a>
+        <a href="#contacts">My contacts</a>
       </div>
     </div>
   </section>
@@ -41,14 +29,15 @@
     display: block;
 
     width: 30rem;
-    flex: 1;
+    flex: 1.5;
     aspect-ratio: 1;
 
-    background-image: url(/src/assets/photo-1.webp);
+    background-image: url(/src/assets/photo.webp);
     background-size: 100%;
     background-position: right 15% top 25%;
 
-    border-radius: 50%;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
   }
 
   .content {
@@ -61,60 +50,29 @@
 
     .text--secondary {
       font-size: 1.2rem;
-
-      .tag {
-        background-color: var(--vt-c-soft-transparent);
-        color: var(--vt-c-soft-white);
-        margin: 0.25rem;
-        padding: 0.3rem 1.1rem;
-        font-size: 0.85rem;
-
-        border-radius: 0.5rem;
-        transition: color 0.5s;
-
-        cursor: pointer;
-        display: inline-block;
-
-        &:hover {
-          transition: color 0.5s;
-          color: var(--color-text);
-        }
-      }
     }
 
     .questions {
       margin-top: 2rem;
       display: flex;
-      justify-content: space-between;
+      gap: 2rem;
 
       a {
         cursor: pointer;
-        font-size: 1.32rem;
+        font-size: 1.26rem;
         color: white;
-        
-        position: relative;
 
-        &::after {
-          content: "";
+        border: 1px solid white;
+        padding: 0.14rem 1.3rem;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+        &:hover {
           background-color: white;
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          height: 2px;
-          width: 0;
-          transition: 0.3s;
-        }
-
-        &:hover,
-        &:focus {
-          color: white;
-        }
-
-        &:hover::after,
-        &:focus::after,
-        &.active::after {
-          background-color: white;
-          width: 100%;
+          color: black;
+          border: 1px solid black;
         }
       }
     }

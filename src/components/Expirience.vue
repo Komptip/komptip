@@ -9,6 +9,7 @@ import freelancephoto from '/src/assets/freelancehunt-photo.webp';
 import zentixlogo from '/src/assets/zentix-logo.webp';
 import newlabellogo from '/src/assets/newlabel-logo.webp';
 import owlweblogo from '/src/assets/owlweb-logo.webp';
+import outsoftlogo from '/src/assets/outsoft-logo.webp';
 
 </script>
 
@@ -59,9 +60,9 @@ import owlweblogo from '/src/assets/owlweb-logo.webp';
             images: [
               { src: freelancephoto, alt: 'Freelancehunt' }
             ],
-            text: 'I worked as a freelancer for over 3 years, completing more than 40 successful projects, including large-scale online stores, document management systems, and multiple integrations with third-party services (payment gateways, 1C, government services)',
+            text: 'Over 3 years of freelance experience with 40+ successful projects, including large-scale e-commerce platforms, document management systems, and complex third-party integrations (e.g., payment gateways, 1C, and government services)',
             buttons: [
-              { text: 'Profile on freelancehunt', link: 'https://freelancehunt.com/freelancer/komptip.html#reviews', classes: 'text-sm text-white bg-orange-500 border-yellow-800' }
+              { text: 'Profile on freelancehunt', link: 'https://freelancehunt.com/en/freelancer/komptip.html#reviews', classes: 'text-sm text-white bg-orange-500 border-yellow-800' }
             ]
           },
           {
@@ -72,7 +73,7 @@ import owlweblogo from '/src/assets/owlweb-logo.webp';
             images: [
               { src: zentixlogo, alt: 'Zenetix' }
             ],
-            text: 'My first full-time experience working in a team on complex projects. My main tech stack was Laravel + Vue. I was involved in both developing new projects and maintaining existing ones.',
+            text: 'First full-time experience working collaboratively on complex projects. Primarily used Laravel and Vue.js to develop new applications and maintain existing ones, gaining hands-on experience across the full development lifecycle',
             buttons: [
               { text: 'Zenetix website', link: 'https://zenetix.com.ua/', classes: 'text-sm text-white bg-indigo-500 border-indigo-800' }
             ]
@@ -85,9 +86,9 @@ import owlweblogo from '/src/assets/owlweb-logo.webp';
             images: [
               { src: newlabellogo, alt: 'NewLabel' }
             ],
-            text: 'I was responsible for the technical support of the company and served as the project manager for all website development and web design projects. At various times, I led a team of up to four people.',
+            text: 'Oversaw the company’s technical support operations and managed all website development and web design projects. Led a team of up to four developers, coordinating tasks, timelines, and client communication to ensure successful project delivery',
             buttons: [
-              { text: 'Website', link: 'https://newlabel.pl/', classes: 'text-sm text-white' }
+              { text: 'Website is not anymore available', link: 'https://newlabel.pl/', classes: 'text-sm text-white' }
             ]
           },
           {
@@ -98,12 +99,25 @@ import owlweblogo from '/src/assets/owlweb-logo.webp';
             images: [
               { src: owlweblogo, alt: 'OwlWeb' }
             ],
-            text: 'Full-time work in web development. My main responsibility was back-end development, but I also worked on small front-end enhancements using React, Vue, and jQuery at different times. I worked on both internal and external projects, including online stores like d2interier.com, pipl.eu, zernyatko.in.ua, and others. I was involved in complex integrations with third-party services, such as the electronic signature service Vchasno and the electronic document management system Chekbox.',
+            text: 'Focused primarily on back-end development, with occasional front-end tasks using React, Vue, and jQuery. Worked on both internal tools and client projects, including e-commerce sites such as d2interier.com, pipl.eu, and zernyatko.in.ua. Participated in complex third-party integrations, including services like Vchasno (e-signatures) and Chekbox (electronic document management)',
             buttons: [
               { text: 'OwlWeb website', link: 'https://owlweb.com.ua/en', classes: 'text-sm text-white bg-pink-500 border-pink-800' }
             ]
+          },
+          {
+            status: 'Web Developer at Outsoft',
+            date: 'December 2024 - Present',
+            icon: 'pi pi-briefcase',
+            color: '#3f51b5',
+            images: [
+              { src: outsoftlogo, alt: 'Outsoft' }
+            ],
+            text: 'Provided technical support for a major e-commerce platform, focusing on bug fixes, performance optimization, and feature development. Simultaneously served as the lead developer on a new internal project',
+            buttons: [
+              { text: 'Outsoft website', link: 'https://outsoft.com/', classes: 'text-sm text-white bg-indigo-500 border-indigo-800' }
+            ]
           }
-        ]
+        ].reverse()
       }
     }
   };
