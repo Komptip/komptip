@@ -77,6 +77,8 @@ import aptimage3 from "/src/assets/portfolio/apt/3.webp";
 
 import reposyimage1 from "/src/assets/portfolio/reposy/1.webp";
 import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
+
+import tiktokimage1 from "/src/assets/portfolio/php-tiktok-sdk/1.webp";
 </script>
 
 <template>
@@ -510,6 +512,20 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
             name: "Pet projects",
             items: [
               {
+                name: "PHP TikTok SDK",
+                preview: tiktokimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'A PHP SDK for the TikTok API, providing a simple and easy-to-use interface for accessing TikTok\'s API. Built with Guzzle, it\'s available on GitHub.'
+                  },
+                  {
+                    type: 'image',
+                    content: tiktokimage1
+                  }
+                ]
+              },
+              {
                 name: "Reposy - AI Google Chrome extension",
                 preview: reposyimage1,
                 components: [
@@ -573,7 +589,7 @@ import reposyimage2 from "/src/assets/portfolio/reposy/2.webp";
               }
             ]
           }
-        ]
+        ].reverse()
       }
     }
   };
