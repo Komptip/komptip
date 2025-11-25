@@ -43,9 +43,6 @@ import zernyatkoimage2 from "/src/assets/portfolio/zernyatko/2.webp";
 import zernyatkoimage3 from "/src/assets/portfolio/zernyatko/3.webp";
 import zernyatkoimage4 from "/src/assets/portfolio/zernyatko/4.webp";
 
-import themyasoimage1 from "/src/assets/portfolio/themyaso/1.webp";
-import themyasoimage2 from "/src/assets/portfolio/themyaso/2.webp";
-
 import checkboximage1 from "/src/assets/portfolio/checkbox/1.webp";
 
 import vchasnoimage1 from "/src/assets/portfolio/vchasno/1.webp";
@@ -60,16 +57,14 @@ import hundredmsimage1 from "/src/assets/portfolio/100ms/1.webp";
 
 import squareupimage1 from "/src/assets/portfolio/squareup/1.webp";
 
+import otomotoimage1 from "/src/assets/portfolio/otomoto/1.webp";
+
+import n8nimage1 from "/src/assets/portfolio/n8n/1.webp";
+
+import makecomimage1 from "/src/assets/portfolio/makecom/1.webp";
+
 import newlabelimage1 from "/src/assets/portfolio/newlabel/1.webp";
 import newlabelimage2 from "/src/assets/portfolio/newlabel/2.webp";
-
-import coolhouseimage1 from "/src/assets/portfolio/coolhouse/1.webp";
-import coolhouseimage2 from "/src/assets/portfolio/coolhouse/2.webp";
-import coolhouseimage3 from "/src/assets/portfolio/coolhouse/3.webp";
-
-import speechkaimage1 from "/src/assets/portfolio/speechka/1.webp";
-import speechkaimage2 from "/src/assets/portfolio/speechka/2.webp";
-import speechkaimage3 from "/src/assets/portfolio/speechka/3.webp";
 
 import aptimage1 from "/src/assets/portfolio/apt/1.webp";
 import aptimage2 from "/src/assets/portfolio/apt/2.webp";
@@ -115,58 +110,8 @@ import tiktokimage1 from "/src/assets/portfolio/php-tiktok-sdk/1.webp";
         selected: null,
         categories: [
           {
-            name: "Websites",
+            name: "Some of websites i have built",
             items: [
-            {
-                name: "Egg Bank",
-                preview: eggbankimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'Professional website for a medical agency specializing in ovum donation, based in Ukraine.'
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage1
-                  },
-                  {
-                    type: 'text',
-                    content: 'Facilitates online ovum procurement with advanced donor filtering. Comprehensive donor profiles available.'
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage8
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage5
-                  },
-                  {
-                    type: 'text',
-                    content: 'Features user accounts with detailed order and profile management.'
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage6
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage7
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage3
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage4
-                  },
-                  {
-                    type: 'image',
-                    content: eggbankimage2
-                  }
-                ]
-              },
               {
                 name: "Tim's Barbecue",
                 preview: bbqimage1,
@@ -216,76 +161,6 @@ import tiktokimage1 from "/src/assets/portfolio/php-tiktok-sdk/1.webp";
                   {
                     type: 'image',
                     content: balletimage4
-                  }
-                ]
-              },
-              {
-                name: "18 Wheeler Driving School",
-                preview: drivingschoolimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'Online platform for 18 Wheels truck driving school. Offers driver\'s license practice tests in English, Ukrainian, and Russian.'
-                  },
-                  {
-                    type: 'image',
-                    content: drivingschoolimage1
-                  },
-                  {
-                    type: 'image',
-                    content: drivingschoolimage2
-                  },
-                  {
-                    type: 'image',
-                    content: drivingschoolimage3
-                  },
-                  {
-                    type: 'image',
-                    content: drivingschoolimage4
-                  }
-                ]
-              },
-              {
-                name: "Buty Poruch",
-                preview: butyporuchimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'Website for Buty Poruch, a Ukrainian non-profit organization dedicated to cancer awareness and support.'
-                  },
-                  {
-                    type: 'image',
-                    content: butyporuchimage1
-                  },
-                  {
-                    type: 'text',
-                    content: 'Comprehensive resource featuring articles, news, and cancer-related information.'
-                  },
-                  {
-                    type: 'image',
-                    content: butyporuchimage2
-                  },
-                  {
-                    type: 'image',
-                    content: butyporuchimage3
-                  },
-                  {
-                    type: 'image',
-                    content: butyporuchimage4
-                  }
-                ]
-              },
-              {
-                name: "Hotels",
-                preview: hotelsimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'Tenant tracking system for hotel pool lifeguards, accommodating multiple guests per tenant.'
-                  },
-                  {
-                    type: 'image',
-                    content: hotelsimage1
                   }
                 ]
               },
@@ -369,42 +244,44 @@ import tiktokimage1 from "/src/assets/portfolio/php-tiktok-sdk/1.webp";
             name: "Integrations",
             items: [
               {
-                name: "Delivery cost calculator with Google Maps API",
-                preview: themyasoimage1,
+                name: "Otomoto integration",
+                preview: otomotoimage1,
                 components: [
                   {
                     type: 'text',
-                    content: 'Google Maps API-powered delivery cost calculator for store-to-client goods delivery.'
+                    content: 'Integration with Otomoto, Poland\'s largest automotive marketplace. Developed automated vehicle listing synchronization system that manages inventory updates, pricing changes, and vehicle specifications across the platform using Otomoto API.'
                   },
                   {
                     type: 'image',
-                    content: themyasoimage1
-                  },
-                  {
-                    type: 'image',
-                    content: themyasoimage2
+                    content: otomotoimage1
                   }
-                ] 
+                ]
               },
               {
-                name: "Cool House online kitchen configurator",
-                preview: coolhouseimage1,
+                name: "n8n workflow automation",
+                preview: n8nimage1,
                 components: [
                   {
                     type: 'text',
-                    content: 'Online kitchen configurator for Cool House, enabling kitchen design and cost calculation. Developed with vanilla JS and jQuery for CMS compatibility.'
+                    content: 'Implementation of n8n workflow automation platform for business process automation. Created custom workflows integrating multiple services, APIs, and databases to streamline operations and reduce manual tasks.'
                   },
                   {
                     type: 'image',
-                    content: coolhouseimage1
+                    content: n8nimage1
+                  }
+                ]
+              },
+              {
+                name: "Make.com automation",
+                preview: makecomimage1,
+                components: [
+                  {
+                    type: 'text',
+                    content: 'Integration and automation solutions using Make.com (formerly Integromat). Designed and implemented complex automation scenarios connecting various applications and services to optimize business workflows.'
                   },
                   {
                     type: 'image',
-                    content: coolhouseimage2
-                  },
-                  {
-                    type: 'image',
-                    content: coolhouseimage3
+                    content: makecomimage1
                   }
                 ]
               },
@@ -562,28 +439,6 @@ import tiktokimage1 from "/src/assets/portfolio/php-tiktok-sdk/1.webp";
                   {
                     type: 'image',
                     content: aptimage3
-                  }
-                ]
-              },
-              {
-                name: "Reddit clone Speechka",
-                preview: speechkaimage1,
-                components: [
-                  {
-                    type: 'text',
-                    content: 'A Reddit-inspired platform developed in late 2022. Features include post creation, commenting, and voting. While no longer active, the source code is available on GitHub, serving as a learning exercise in complex web application development.'
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage1
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage2
-                  },
-                  {
-                    type: 'image',
-                    content: speechkaimage3
                   }
                 ]
               }

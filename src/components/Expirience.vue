@@ -7,9 +7,9 @@ import '/node_modules/primeflex/primeflex.css'
 
 import freelancephoto from '/src/assets/freelancehunt-photo.webp';
 import zentixlogo from '/src/assets/zentix-logo.webp';
-import newlabellogo from '/src/assets/newlabel-logo.webp';
 import owlweblogo from '/src/assets/owlweb-logo.webp';
 import outsoftlogo from '/src/assets/outsoft-logo.webp';
+import dilizylogo from '/src/assets/dilizy-logo.webp';
 
 </script>
 
@@ -67,7 +67,7 @@ import outsoftlogo from '/src/assets/outsoft-logo.webp';
           },
           {
             status: 'Zenetix Digital Production',
-            date: 'January 2022 - July 2023',
+            date: 'February 2022 - March 2023',
             icon: 'pi pi-briefcase',
             color: '#3f51b5',
             images: [
@@ -79,21 +79,8 @@ import outsoftlogo from '/src/assets/outsoft-logo.webp';
             ]
           },
           {
-            status: 'NewLabel',
-            date: 'August 2023 - January 2024',
-            icon: 'pi pi-users',
-            color: '#673AB7',
-            images: [
-              { src: newlabellogo, alt: 'NewLabel' }
-            ],
-            text: 'Oversaw the company’s technical support operations and managed all website development and web design projects. Led a team of up to four developers, coordinating tasks, timelines, and client communication to ensure successful project delivery',
-            buttons: [
-              { text: 'Website is not anymore available', link: 'https://newlabel.pl/', classes: 'text-sm text-white' }
-            ]
-          },
-          {
             status: 'Back-end Web Developer at Owlweb',
-            date: 'February - November 2024',
+            date: 'April 2023 - April 2024',
             icon: 'pi pi-wrench',
             color: '#e677b9',
             images: [
@@ -106,7 +93,7 @@ import outsoftlogo from '/src/assets/outsoft-logo.webp';
           },
           {
             status: 'Web Developer at Outsoft',
-            date: 'December 2024 - Present',
+            date: 'May 2024 - June 2025',
             icon: 'pi pi-briefcase',
             color: '#3f51b5',
             images: [
@@ -115,6 +102,19 @@ import outsoftlogo from '/src/assets/outsoft-logo.webp';
             text: 'Provided technical support for a major e-commerce platform, focusing on bug fixes, performance optimization, and feature development. Simultaneously served as the lead developer on a new internal project',
             buttons: [
               { text: 'Outsoft website', link: 'https://outsoft.com/', classes: 'text-sm text-white bg-indigo-500 border-indigo-800' }
+            ]
+          },
+          {
+            status: 'Dilizy',
+            date: 'July 2025 - December 2025',
+            icon: 'pi pi-briefcase',
+            color: '#9C27B0',
+            images: [
+              { src: dilizylogo, alt: 'Dilizy' }
+            ],
+            text: 'Maintained and improved a large ecosystem consisting of several major, tightly interconnected Laravel monoliths that regularly exchanged data with each other',
+            buttons: [
+              { text: 'Dilizy website', link: 'https://dilizy.ai/', classes: 'text-sm text-black bg-yellow-400 border-yellow-800' }
             ]
           }
         ].reverse()

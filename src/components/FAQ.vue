@@ -11,7 +11,7 @@ import 'primevue/resources/themes/lara-dark-indigo/theme.css'
     <Accordion :activeIndex="0">
         <AccordionTab header="Are you open to work? 🕐">
             <p class="m-0">
-                <span class="font-bold underline">Yes</span>, recently i has been switched from full-time to part-time job at Ousoft due to organizational reasons. Currently i am focused on a few pet projects im working on and part-time job at Outsoft. But <span class="font-bold underline">im fully open for new opportunities including full-time job.</span>
+                <span class="font-bold underline">Yes</span>, recently i has been layed off from Dilizy due to organizational reasons. Currently i am focused on a few pet projects im working on. But <span class="font-bold underline">im fully open for new opportunities including full-time job.</span>
             </p>
         </AccordionTab>
         <AccordionTab header="What is your primary stack? 🪚🛠️">
